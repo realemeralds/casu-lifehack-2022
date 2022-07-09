@@ -4,9 +4,9 @@
 
 .loginForm {
   width: 400px;
-  box-shadow: 0 0 10px #72636360;
+  box-shadow: 0 0 10px rgba(114, 99, 99, 0.3764705882);
   border-radius: 20px;
   padding: 50px;
   margin: auto;
   margin-top: 200px;
-}
+}/*# sourceMappingURL=index.css.map */
