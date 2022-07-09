@@ -8,23 +8,17 @@
   src: url(../assets/fonts/SF-Pro-Display-Semibold.otf);
 }
 
-.loginForm {
-  width: 400px;
-  -webkit-box-shadow: 0 0 10px #72636360;
-          box-shadow: 0 0 10px #72636360;
-  border-radius: 20px;
-  padding: 50px;
-  margin: auto;
-  margin-top: 200px;
+.navbar {
+  background-color: "#FFF1EC";
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
   font-family: SFDisplaySemibold;
   font-size: 30px;
   margin-left: 20px;
 }
 
-.nav-link {
+.navbar .nav-link {
   font-family: SFDisplayRegular;
   font-size: 22px;
   margin: 0 15px;
