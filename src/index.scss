@@ -29,6 +29,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
 
 
   .navbar-brand {
@@ -136,6 +137,13 @@ body {
   .subjectSpan {
     color: #222222
   }
+
+  .alert-success {
+    font-family: SFDisplayRegular;
+    color: #222222;
+    margin-top: 10px;
+    width: fit-content
+  }
 }
 
 
@@ -185,6 +193,13 @@ body {
     }
   }
 
+  .filterInfo {
+    font-family: SFDisplayRegular;
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+  }
+
   .card-tutor {
     padding: 20px;
     font-family: SFDisplayRegular;
@@ -195,6 +210,8 @@ body {
       font-family: SFDisplaySemibold;
       margin-bottom: 5px;
     }
+
+
 
     .bio {
       margin-bottom: 10px;
@@ -209,5 +226,24 @@ body {
     }
 
 
+  }
+}
+
+.account {
+  h1 {
+    font-family: SFDisplaySemibold;
+  }
+
+  .desc {
+    font-family: SFDisplayLight;
+  }
+
+  .status {
+    font-family: SFDisplaySemibold;
+  }
+
+  .btn {
+    font-family: SFDisplayRegular;
+    font-size: 20px
   }
 }

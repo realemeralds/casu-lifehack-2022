@@ -18,6 +18,7 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script defer src="../../../scripts/tutor.js"></script>
   </head>
   <body class="tutor">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -63,7 +64,7 @@
 
     <!-- Code starts here -->
     <div class="container-fluid tutorContainer">
-      <h1 class="heading">Find Tutors</h1>
+      <h1 class="heading mt-5">Find Tutors</h1>
       <p class="subheader">
         Use the relevant filters to narrow your search, and click on the tiles
         to contact the tutors.
@@ -75,9 +76,12 @@
         placeholder="Search for tutors.."
       /> -->
 
-      <div class="d-flex flex-row me-5 my-5">
+      <div class="d-flex flex-row me-5 mb-5 mt-4">
         <div class="col-2 card card-filter">
-          <div>
+            <p class="filterInfo">
+              Hold down <b>CTRL</b> to select mutliple subjects or
+              qualifications.
+            </p>
             <p class="filterLabel" style="color: #656839">Subjects</p>
             <select class="form-select" id="subject" multiple>
               <option class="option" value="1">English</option>
@@ -90,7 +94,7 @@
               <option class="option" value="8">Chemistry</option>
               <option class="option" value="9">Mathematics</option>
             </select>
-          </div>
+          </>
           <div>
             <p class="filterLabel" style="color: #52154e">Qualification</p>
             <select class="form-select" id="qualis" multiple>
@@ -120,67 +124,8 @@
             </select>
           </div>
         </div>
-        <div class="col-10 row">
-          <div class="ms-5 mb-5 col-5">
-            <div class="card-tutor">
-              <div class="card-body">
-                <h5 class="card-title">Tutor</h5>
-                <p class="bio">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
-                  rem perferendis debitis.
-                </p>
-                <p class="subjects">
-                  <span>Subjects taught:</span> History, Physics, etc.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="ms-5 mb-5 col-5">
-            <div class="card-tutor">
-              <div class="card-body">
-                <h5 class="card-title">Tutor</h5>
-                <p class="bio">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
-                  rem perferendis debitis.
-                </p>
-                <p class="subjects">
-                  <span>Subjects taught:</span> History, Physics, etc.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="ms-5 mb-5 col-5">
-            <div class="card-tutor">
-              <div class="card-body">
-                <h5 class="card-title">Tutor</h5>
-                <p class="bio">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
-                  rem perferendis debitis.
-                </p>
-                <p class="subjects">
-                  <span>Subjects taught:</span> History, Physics, etc.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="ms-5 mb-5 col-5">
-            <div class="card-tutor">
-              <div class="card-body">
-                <h5 class="card-title">Tutor</h5>
-                <p class="bio">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
-                  rem perferendis debitis.
-                </p>
-                <p class="subjects">
-                  <span>Subjects taught:</span> History, Physics, etc.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="col-10 row d-flex justify-content-center tutorCards">
+          <!-- will be populated -->
         </div>
       </div>
     </div>

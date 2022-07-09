@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="account">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="../../../index.html">CasuTutor</a>
@@ -62,9 +62,16 @@
     </nav>
 
     <!-- starts here -->
-    <h1>Account</h1>
-    <p></p>
-    <img />
-    <p>Sign up</p>
+    <div class="d-flex flex-column justify-content-center align-items-center">
+      <h1>Account</h1>
+      <p class="desc">Monitor your account from here.</p>
+      <img src="https://unsplash.it/300/300" class="rounded-circle" />
+      <h5 class="status">Logged in as ...</h5>
+      <div class="d-flex flex-column">
+        <a type="button" href="#" class="btn btn-primary">Sign In</a>
+        <a type="button" href="#" class="btn btn-primary">Register</a>
+        <a type="button" href="#" class="btn btn-primary">Sign Out</a>
+      </div>
+    </div>
   </body>
 </html>
