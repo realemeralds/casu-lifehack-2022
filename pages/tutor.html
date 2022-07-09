@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CasuTutor</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
@@ -11,7 +11,7 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../dist/tutor.css" />
+    <link rel="stylesheet" href="../dist/index.css" />
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -19,7 +19,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body class="tutor">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="../../../index.html">CasuTutor</a>
@@ -62,5 +62,127 @@
     </nav>
 
     <!-- Code starts here -->
+    <div class="container-fluid tutorContainer">
+      <h1 class="heading">Find Tutors</h1>
+      <p class="subheader">
+        Use the relevant filters to narrow your search, and click on the tiles
+        to contact the tutors.
+      </p>
+      <!-- <input
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search for tutors.."
+      /> -->
+
+      <div class="d-flex flex-row me-5 my-5">
+        <div class="col-2 card card-filter">
+          <div>
+            <p class="filterLabel" style="color: #656839">Subjects</p>
+            <select class="form-select" id="subject" multiple>
+              <option class="option" value="1">English</option>
+              <option class="option" value="2">Foreign Language</option>
+              <option class="option" value="3">Economics</option>
+              <option class="option" value="4">History</option>
+              <option class="option" value="5">Geography</option>
+              <option class="option" value="6">Business</option>
+              <option class="option" value="7">Physics</option>
+              <option class="option" value="8">Chemistry</option>
+              <option class="option" value="9">Mathematics</option>
+            </select>
+          </div>
+          <div>
+            <p class="filterLabel" style="color: #52154e">Qualification</p>
+            <select class="form-select" id="qualis" multiple>
+              <option class="option" value="1">English</option>
+              <option class="option" value="2">Foreign Language</option>
+              <option class="option" value="3">Economics</option>
+              <option class="option" value="4">History</option>
+              <option class="option" value="5">Geography</option>
+              <option class="option" value="6">Business</option>
+              <option class="option" value="7">Physics</option>
+              <option class="option" value="8">Chemistry</option>
+              <option class="option" value="9">Mathematics</option>
+            </select>
+          </div>
+          <div>
+            <p class="filterLabel" style="color: #3c91e6">Prestige</p>
+            <select class="form-select" id="Prestige">
+              <option class="option" value="1">English</option>
+              <option class="option" value="2">Foreign Language</option>
+              <option class="option" value="3">Economics</option>
+              <option class="option" value="4">History</option>
+              <option class="option" value="5">Geography</option>
+              <option class="option" value="6">Business</option>
+              <option class="option" value="7">Physics</option>
+              <option class="option" value="8">Chemistry</option>
+              <option class="option" value="9">Mathematics</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-10 row">
+          <div class="ms-5 mb-5 col-5">
+            <div class="card-tutor">
+              <div class="card-body">
+                <h5 class="card-title">Tutor</h5>
+                <p class="bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
+                  rem perferendis debitis.
+                </p>
+                <p class="subjects">
+                  <span>Subjects taught:</span> History, Physics, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ms-5 mb-5 col-5">
+            <div class="card-tutor">
+              <div class="card-body">
+                <h5 class="card-title">Tutor</h5>
+                <p class="bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
+                  rem perferendis debitis.
+                </p>
+                <p class="subjects">
+                  <span>Subjects taught:</span> History, Physics, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ms-5 mb-5 col-5">
+            <div class="card-tutor">
+              <div class="card-body">
+                <h5 class="card-title">Tutor</h5>
+                <p class="bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
+                  rem perferendis debitis.
+                </p>
+                <p class="subjects">
+                  <span>Subjects taught:</span> History, Physics, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="ms-5 mb-5 col-5">
+            <div class="card-tutor">
+              <div class="card-body">
+                <h5 class="card-title">Tutor</h5>
+                <p class="bio">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+                  quasi ducimus commodi pariatur nihil, officiis minus nesciunt
+                  rem perferendis debitis.
+                </p>
+                <p class="subjects">
+                  <span>Subjects taught:</span> History, Physics, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
