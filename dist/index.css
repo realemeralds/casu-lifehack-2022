@@ -1,12 +1,32 @@
-.tes {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+@font-face {
+  font-family: SFDisplayRegular;
+  src: url(../assets/fonts/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+  font-family: SFDisplaySemibold;
+  src: url(../assets/fonts/SF-Pro-Display-Semibold.otf);
 }
 
 .loginForm {
   width: 400px;
-  box-shadow: 0 0 10px rgba(114, 99, 99, 0.3764705882);
+  -webkit-box-shadow: 0 0 10px #72636360;
+          box-shadow: 0 0 10px #72636360;
   border-radius: 20px;
   padding: 50px;
   margin: auto;
   margin-top: 200px;
-}/*# sourceMappingURL=index.css.map */
+}
+
+.navbar-brand {
+  font-family: SFDisplaySemibold;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.nav-link {
+  font-family: SFDisplayRegular;
+  font-size: 22px;
+  margin: 0 15px;
+  color: #222222;
+}

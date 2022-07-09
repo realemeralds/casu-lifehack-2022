@@ -1,6 +1,13 @@
-.tes {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+@font-face {
+  font-family: SFDisplayRegular;
+  src: url(../assets/fonts/SF-Pro-Display-Regular.otf);
 }
+
+@font-face {
+  font-family: SFDisplaySemibold;
+  src: url(../assets/fonts/SF-Pro-Display-Semibold.otf);
+}
+
 
 .loginForm {
   width: 400px;
@@ -9,4 +16,18 @@
   padding: 50px;
   margin: auto;
   margin-top: 200px;
+}
+
+.navbar-brand {
+  font-family: SFDisplaySemibold;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.nav-link {
+  font-family: SFDisplayRegular;
+  font-size: 22px;
+  margin: 0 15px;
+  color: #222222;
+
 }
