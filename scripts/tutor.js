@@ -1,48 +1,60 @@
 tutorCards = document.querySelector(".tutorCards");
-json = [
-  {
-    username: "Tutor",
-    interest: [4, 5],
-    quali: 3,
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
-    prestige: 3.2,
-  },
-  {
-    username: "Tutor",
-    interest: [4, 5],
-    quali: 3,
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
-    prestige: 3.2,
-  },
-  {
-    username: "Tutor",
-    interest: [4, 5],
-    quali: 3,
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
-    prestige: 3.2,
-  },
-  {
-    username: "Tutor",
-    interest: [4, 5],
-    quali: 3,
-    bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
-    prestige: 3.2,
-  },
-  {
-    username: "John Lee",
-    interest: [1, 2, 3],
-    quali: 3,
-    bio: "hello world!",
-    prestige: 3.2,
-  },
-  {
-    username: "Susie Tay",
-    interest: [4, 5, 6],
-    quali: 3,
-    bio: "hello world!sdadasasd",
-    prestige: 4.0,
-  },
-];
+url = "http://192.168.1.16:5000";
+
+responseString = fetch(`${url}/tutor`, {
+  mode: "cors",
+})
+  .then((response) => response.json())
+  .then((data) => {
+    json = data;
+    json2 = [
+      {
+        username: "Tutor",
+        interest: [4, 5],
+        quali: 3,
+        bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
+        prestige: 3.2,
+      },
+      {
+        username: "Tutor",
+        interest: [4, 5],
+        quali: 3,
+        bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
+        prestige: 3.2,
+      },
+      {
+        username: "Tutor",
+        interest: [4, 5],
+        quali: 3,
+        bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
+        prestige: 3.2,
+      },
+      {
+        username: "Tutor",
+        interest: [4, 5],
+        quali: 3,
+        bio: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus quibusdam necessitatibus neque. Odit aut maxime beatae eos quas praesentium?",
+        prestige: 3.2,
+      },
+      {
+        username: "John Lee",
+        interest: [1, 2, 3],
+        quali: 3,
+        bio: "hello world!",
+        prestige: 3.2,
+      },
+      {
+        username: "Susie Tay",
+        interest: [4, 5, 6],
+        quali: 3,
+        bio: "hello world!sdadasasd",
+        prestige: 4.0,
+      },
+    ];
+    console.log(json);
+    console.log(json2);
+    render_tutors();
+  });
 
 const subjectsList = [
   "English",
@@ -64,7 +76,7 @@ const qualiList = [
   "Graduate or Post-Graduate Degree",
 ];
 
-function render_tutors(qualifications, prestige, search) {
+function render_tutors() {
   tutorCards.innerHTML = "";
   var selectedSubject = $("#subject").val();
   var selectedQualis = $("#qualis").val();
@@ -77,9 +89,12 @@ function render_tutors(qualifications, prestige, search) {
   if (selectedQualis.length == 0) {
     selectedQualis = [0, 1, 2, 3, 4, 5, 6];
   }
-  console.log(selectedQualis);
-  console.log(selectedSubject);
   for (var i = 0; i < json.length; i++) {
+    console.log(typeof json[i].interest);
+    if (typeof json[i].interest == "number") {
+      console.log(json);
+      json[i].interest = Array(json[i].interest);
+    }
     if (
       selectedSubject.every((val) => json[i].interest.includes(val)) &&
       selectedQualis.includes(json[i].quali)
@@ -117,6 +132,7 @@ function render_tutors(qualifications, prestige, search) {
       indivCard.classList.add("col-5");
       indivCard.setAttribute("onclick", `open_popup(${i})`);
       indivCard.appendChild(firstInline);
+      console.log(indivCard);
       tutorCards.appendChild(indivCard);
     }
   }
@@ -152,5 +168,3 @@ function close_popup() {
 }
 window.addEventListener("click", () => render_tutors());
 document.querySelector(".close").addEventListener("click", close_popup);
-
-render_tutors();
