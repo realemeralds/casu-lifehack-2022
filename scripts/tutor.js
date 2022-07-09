@@ -95,16 +95,14 @@ function render_tutors(qualifications, prestige, search) {
       bio.innerHTML = indivJson.bio;
       subjects = document.createElement("p");
       subjects.classList.add("subjects");
-      subjects.innerHTML = `<span>Subjects taught:</span> ${indivJson.interest.map(
+      subjects.innerHTML = `<span>Subjects:</span> ${indivJson.interest.map(
         (element) => {
           return " " + subjectsList[element];
         }
       )}`;
       qualis = document.createElement("p");
       qualis.classList.add("subjects");
-      qualis.innerHTML = `<span>Qualification:</span> ${
-        qualiList[indivJson.quali]
-      }`;
+      qualis.innerHTML = `<span>Current Prestige:</span> ${indivJson.prestige}`;
       indivCardBody.appendChild(tutorName);
       indivCardBody.appendChild(bio);
       indivCardBody.appendChild(subjects);
@@ -135,7 +133,7 @@ function open_popup(i) {
   popup_window.querySelector(".bio").innerHTML = indivJson.bio;
   popup_window.getElementsByClassName(
     "subjects"
-  )[0].innerHTML = `<span>Subjects taught:</span> ${indivJson.interest.map(
+  )[0].innerHTML = `<span>Subjects:</span> ${indivJson.interest.map(
     (element) => {
       return " " + subjectsList[element];
     }
