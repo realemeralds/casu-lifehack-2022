@@ -19,8 +19,17 @@
   box-sizing: border-box;
 }
 
+body {
+  padding-top: 71px;
+}
+
 .navbar {
   background-color: "#FFF1EC";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
 
   .navbar-brand {
     font-family: SFDisplaySemibold;
@@ -70,6 +79,8 @@
 
 .sign-up-teacher {
 
+  overflow-x: hidden;
+
   .form-label,
   .form-text,
   .form-check-label,
@@ -88,7 +99,8 @@
     width: 100vw;
     height: 90vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 5vh;
     align-items: center;
   }
 

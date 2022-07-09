@@ -99,11 +99,9 @@
             aria-describedby="emailHelp"
           />
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label mb-2"
-            >Interested Subjects</label
-          >
-          <div id="subjectHelp" class="form-text mt-0">
+        <div class="mb-4">
+          <label class="form-label mb-1">Interested Subjects</label>
+          <div id="subjectHelp" class="form-text mt-0 mb-1">
             Subjects you are interested and comfortable in teaching. <br />
             <span class="subjectSpan"
               >Hold down <b>CTRL</b> to select multiple.</span
@@ -126,10 +124,6 @@
             <option class="option" value="9">Mathematics</option>
           </select>
         </div>
-        <div class="mb-3"></div>
-        <div id="emailHelp" class="form-text">
-          Again, we'll <b>never</b> share your data with anyone else.
-        </div>
         <div class="form-floating mb-3">
           <textarea
             class="form-control"
@@ -139,6 +133,21 @@
             style="height: 100px"
           ></textarea>
           <label for="floatingTextarea">Bio</label>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Contact details</label
+          >
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div id="emailHelp" class="form-text">
+          Again, we'll <b>never</b> share your data with anyone else.
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>

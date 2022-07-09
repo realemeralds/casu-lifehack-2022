@@ -20,8 +20,16 @@
           box-sizing: border-box;
 }
 
+body {
+  padding-top: 71px;
+}
+
 .navbar {
   background-color: "#FFF1EC";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .navbar .navbar-brand {
@@ -79,6 +87,10 @@
   padding: 20px;
 }
 
+.sign-up-teacher {
+  overflow-x: hidden;
+}
+
 .sign-up-teacher .form-label,
 .sign-up-teacher .form-text,
 .sign-up-teacher .form-check-label,
@@ -100,9 +112,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
