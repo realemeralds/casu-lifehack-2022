@@ -49,6 +49,8 @@ body {
 .sign-in,
 .sign-up {
 
+  overflow-x: hidden;
+
   .form-label,
   .form-text,
   .form-check-label,
@@ -58,9 +60,10 @@ body {
 
   .loginContainer {
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 5vh;
     align-items: center;
   }
 
@@ -75,6 +78,20 @@ body {
     box-shadow: 0 0 10px #72636360;
     border-radius: 20px;
     padding: 20px;
+  }
+
+  .alert-success {
+    font-family: SFDisplayRegular;
+    color: #222222;
+    margin-top: 10px;
+    width: fit-content
+  }
+
+  .alert-danger {
+    font-family: SFDisplayRegular;
+    color: #180d1c;
+    margin-top: 10px;
+    width: fit-content
   }
 }
 
@@ -334,14 +351,15 @@ body {
     margin-bottom: 20px;
   }
 
-  img {
-    margin-bottom: 20px;
+
+  .accountImage{
+    margin-bottom: 40px;
   }
 
   .btn {
     font-family: SFDisplayRegular;
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   #button1 {

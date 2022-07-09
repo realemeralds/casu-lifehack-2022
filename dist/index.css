@@ -46,6 +46,11 @@ body {
   color: #222222;
 }
 
+.sign-in,
+.sign-up {
+  overflow-x: hidden;
+}
+
 .sign-in .form-label,
 .sign-in .form-text,
 .sign-in .form-check-label,
@@ -60,13 +65,14 @@ body {
 .sign-in .loginContainer,
 .sign-up .loginContainer {
   width: 100vw;
-  height: 90vh;
+  height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -86,6 +92,26 @@ body {
           box-shadow: 0 0 10px #72636360;
   border-radius: 20px;
   padding: 20px;
+}
+
+.sign-in .alert-success,
+.sign-up .alert-success {
+  font-family: SFDisplayRegular;
+  color: #222222;
+  margin-top: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.sign-in .alert-danger,
+.sign-up .alert-danger {
+  font-family: SFDisplayRegular;
+  color: #180d1c;
+  margin-top: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .sign-up-teacher {
@@ -350,14 +376,14 @@ body {
   margin-bottom: 20px;
 }
 
-.account img {
-  margin-bottom: 20px;
+.account .accountImage {
+  margin-bottom: 40px;
 }
 
 .account .btn {
   font-family: SFDisplayRegular;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .account #button1 {
