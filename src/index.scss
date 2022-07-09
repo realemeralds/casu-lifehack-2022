@@ -1,4 +1,9 @@
 @font-face {
+  font-family: SFDisplayLight;
+  src: url(../assets/fonts/SF-Pro-Display-Light.otf);
+}
+
+@font-face {
   font-family: SFDisplayRegular;
   src: url(../assets/fonts/SF-Pro-Display-Regular.otf);
 }
@@ -6,6 +11,12 @@
 @font-face {
   font-family: SFDisplaySemibold;
   src: url(../assets/fonts/SF-Pro-Display-Semibold.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .navbar {
@@ -112,5 +123,79 @@
 
   .subjectSpan {
     color: #222222
+  }
+}
+
+
+.tutor {
+
+  .tutorContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin: 0 50px;
+
+  }
+
+  .heading {
+    text-align: center;
+    font-family: SFDisplaySemibold;
+    color: #52154E;
+    font-size: 50px;
+  }
+
+  .subheader {
+    text-align: center;
+    font-family: SFDisplayLight;
+    color: #222222;
+    font-size: 20px;
+  }
+
+  .card-filter {
+    padding: 20px;
+    border-width: 0;
+    box-shadow: 0 0 10px #72636360;
+
+    .filterLabel {
+      font-family: SFDisplayRegular;
+      font-size: 20px;
+      margin-bottom: 3px;
+
+    }
+
+    .option {
+      font-family: SFDisplayRegular;
+    }
+
+    select {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .card-tutor {
+    padding: 20px;
+    font-family: SFDisplayRegular;
+    border: #6d60605f 1px solid;
+    border-radius: 20px;
+
+    .card-title {
+      font-family: SFDisplaySemibold;
+      margin-bottom: 5px;
+    }
+
+    .bio {
+      margin-bottom: 10px;
+    }
+
+    .subjects {
+      margin-bottom: 0px;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+
   }
 }
