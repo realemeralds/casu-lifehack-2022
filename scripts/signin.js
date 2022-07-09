@@ -1,4 +1,4 @@
-url = "http://192.168.1.16:5000";
+url = "https://lifehack-flask-auth.herokuapp.com";
 formElem = document.querySelector("#loginForm");
 console.log(formElem);
 formElem.addEventListener("submit", function (e) {
