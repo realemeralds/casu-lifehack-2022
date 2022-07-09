@@ -8,25 +8,123 @@
   src: url(../assets/fonts/SF-Pro-Display-Semibold.otf);
 }
 
-.loginForm {
-  width: 400px;
-  -webkit-box-shadow: 0 0 10px #72636360;
-          box-shadow: 0 0 10px #72636360;
-  border-radius: 20px;
-  padding: 50px;
-  margin: auto;
-  margin-top: 200px;
+.navbar {
+  background-color: "#FFF1EC";
 }
 
-.navbar-brand {
+.navbar .navbar-brand {
   font-family: SFDisplaySemibold;
   font-size: 30px;
   margin-left: 20px;
 }
 
-.nav-link {
+.navbar .nav-link {
   font-family: SFDisplayRegular;
   font-size: 22px;
   margin: 0 15px;
+  color: #222222;
+}
+
+.sign-in .form-label,
+.sign-in .form-text,
+.sign-in .form-check-label,
+.sign-in .btn,
+.sign-up .form-label,
+.sign-up .form-text,
+.sign-up .form-check-label,
+.sign-up .btn {
+  font-family: SFDisplayRegular;
+}
+
+.sign-in .loginContainer,
+.sign-up .loginContainer {
+  width: 100vw;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-in .heading,
+.sign-up .heading {
+  font-family: SFDisplaySemibold;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.sign-in .loginForm,
+.sign-up .loginForm {
+  width: 400px;
+  -webkit-box-shadow: 0 0 10px #72636360;
+          box-shadow: 0 0 10px #72636360;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.sign-up-teacher .form-label,
+.sign-up-teacher .form-text,
+.sign-up-teacher .form-check-label,
+.sign-up-teacher .btn {
+  font-family: SFDisplayRegular;
+}
+
+.sign-up-teacher .loginForm {
+  width: 400px;
+  -webkit-box-shadow: 0 0 10px #72636360;
+          box-shadow: 0 0 10px #72636360;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.sign-up-teacher .loginContainer {
+  width: 100vw;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sign-up-teacher .heading {
+  font-family: SFDisplaySemibold;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.sign-up-teacher .subheader {
+  font-family: SFDisplayRegular;
+  font-size: 22px;
+}
+
+.sign-up-teacher #emailHelp {
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.sign-up-teacher .option {
+  font-family: SFDisplayRegular;
+}
+
+.sign-up-teacher .ageText {
+  margin-top: 10px;
+}
+
+.sign-up-teacher #subjectHelp {
+  font-family: SFDisplayRegular;
+  line-height: 1.2;
+}
+
+.sign-up-teacher .subjectSpan {
   color: #222222;
 }
