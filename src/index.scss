@@ -149,6 +149,13 @@ body {
 
 .tutor {
 
+  .tutorCards {
+    button {
+      background-color: #FFFFFF00;
+      border-width: 0;
+    }
+  }
+
   .tutorContainer {
     display: flex;
     justify-content: center;
@@ -184,6 +191,11 @@ body {
 
     }
 
+    .btn {
+      font-family: SFDisplayRegular;
+      width: min-content;
+    }
+
     .option {
       font-family: SFDisplayRegular;
     }
@@ -205,13 +217,12 @@ body {
     font-family: SFDisplayRegular;
     border: #6d60605f 1px solid;
     border-radius: 20px;
+    position: relative;
 
     .card-title {
       font-family: SFDisplaySemibold;
       margin-bottom: 5px;
     }
-
-
 
     .bio {
       margin-bottom: 10px;
@@ -219,20 +230,100 @@ body {
 
     .subjects {
       margin-bottom: 0px;
+      text-align: center;
 
       span {
         font-weight: bold;
       }
     }
 
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      border-width: 0;
+      background-color: #FFFFFF;
+    }
 
+  }
+
+  .popupMenu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-170px, -200px);
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 70;
+    background-color: #FFFFFF;
+    /* Need a specific value to work */
+
+    body {
+      position: relative;
+    }
+
+    .card-tutor {
+      background-color: #FFFFFF;
+      width: 400px;
+      padding: 20px;
+      font-family: SFDisplayRegular;
+      border: #6d60605f 1px solid;
+      border-radius: 20px;
+      z-index: 70;
+
+      .card-title {
+        font-family: SFDisplaySemibold;
+        font-size: 30px;
+        margin-bottom: 5px;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 20px;
+      }
+
+      .bio {
+        margin-bottom: 10px;
+      }
+
+      .subjects {
+        margin-bottom: 0px;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      a {
+        margin-top: 10px;
+        font-family: SFDisplaySemibold;
+      }
+    }
+  }
+
+  .popUpBackground {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 60;
+    inset: 0;
+    background-color: #676666dc;
   }
 }
 
 .account {
   h1 {
     font-family: SFDisplaySemibold;
+    margin-top: 30px;
   }
+
 
   .desc {
     font-family: SFDisplayLight;
@@ -240,10 +331,28 @@ body {
 
   .status {
     font-family: SFDisplaySemibold;
+    margin-bottom: 20px;
+  }
+
+  img {
+    margin-bottom: 20px;
   }
 
   .btn {
     font-family: SFDisplayRegular;
-    font-size: 20px
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  #button1 {
+    background-color: #52154E
+  }
+
+  #button2 {
+    background-color: #656839;
+  }
+
+  #button3 {
+    background-color: #52154E
   }
 }

@@ -164,6 +164,11 @@ body {
   width: fit-content;
 }
 
+.tutor .tutorCards button {
+  background-color: #FFFFFF00;
+  border-width: 0;
+}
+
 .tutor .tutorContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -206,6 +211,13 @@ body {
   margin-bottom: 3px;
 }
 
+.tutor .card-filter .btn {
+  font-family: SFDisplayRegular;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+
 .tutor .card-filter .option {
   font-family: SFDisplayRegular;
 }
@@ -226,6 +238,7 @@ body {
   font-family: SFDisplayRegular;
   border: #6d60605f 1px solid;
   border-radius: 20px;
+  position: relative;
 }
 
 .tutor .card-tutor .card-title {
@@ -239,14 +252,93 @@ body {
 
 .tutor .card-tutor .subjects {
   margin-bottom: 0px;
+  text-align: center;
 }
 
 .tutor .card-tutor .subjects span {
   font-weight: bold;
 }
 
+.tutor .card-tutor .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border-width: 0;
+  background-color: #FFFFFF;
+}
+
+.tutor .popupMenu {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-170px, -200px);
+          transform: translate(-170px, -200px);
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 70;
+  background-color: #FFFFFF;
+  /* Need a specific value to work */
+}
+
+.tutor .popupMenu body {
+  position: relative;
+}
+
+.tutor .popupMenu .card-tutor {
+  background-color: #FFFFFF;
+  width: 400px;
+  padding: 20px;
+  font-family: SFDisplayRegular;
+  border: #6d60605f 1px solid;
+  border-radius: 20px;
+  z-index: 70;
+}
+
+.tutor .popupMenu .card-tutor .card-title {
+  font-family: SFDisplaySemibold;
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.tutor .popupMenu .card-tutor img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.tutor .popupMenu .card-tutor .bio {
+  margin-bottom: 10px;
+}
+
+.tutor .popupMenu .card-tutor .subjects {
+  margin-bottom: 0px;
+}
+
+.tutor .popupMenu .card-tutor .subjects span {
+  font-weight: bold;
+}
+
+.tutor .popupMenu .card-tutor a {
+  margin-top: 10px;
+  font-family: SFDisplaySemibold;
+}
+
+.tutor .popUpBackground {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 60;
+  inset: 0;
+  background-color: #676666dc;
+}
+
 .account h1 {
   font-family: SFDisplaySemibold;
+  margin-top: 30px;
 }
 
 .account .desc {
@@ -255,9 +347,27 @@ body {
 
 .account .status {
   font-family: SFDisplaySemibold;
+  margin-bottom: 20px;
+}
+
+.account img {
+  margin-bottom: 20px;
 }
 
 .account .btn {
   font-family: SFDisplayRegular;
   font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.account #button1 {
+  background-color: #52154E;
+}
+
+.account #button2 {
+  background-color: #656839;
+}
+
+.account #button3 {
+  background-color: #52154E;
 }

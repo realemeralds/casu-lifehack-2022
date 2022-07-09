@@ -18,7 +18,9 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script defer src="../../../scripts/tutor.js"></script>
+    <script src="https://kit.fontawesome.com/51ffbc52bc.js" crossorigin="anonymous"></script>
   </head>
   <body class="tutor">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -69,12 +71,6 @@
         Use the relevant filters to narrow your search, and click on the tiles
         to contact the tutors.
       </p>
-      <!-- <input
-        type="text"
-        id="myInput"
-        onkeyup="myFunction()"
-        placeholder="Search for tutors.."
-      /> -->
 
       <div class="d-flex flex-row me-5 mb-5 mt-4">
         <div class="col-2 card card-filter">
@@ -84,29 +80,27 @@
             </p>
             <p class="filterLabel" style="color: #656839">Subjects</p>
             <select class="form-select" id="subject" multiple>
-              <option class="option" value="1">English</option>
-              <option class="option" value="2">Foreign Language</option>
-              <option class="option" value="3">Economics</option>
-              <option class="option" value="4">History</option>
-              <option class="option" value="5">Geography</option>
-              <option class="option" value="6">Business</option>
-              <option class="option" value="7">Physics</option>
-              <option class="option" value="8">Chemistry</option>
-              <option class="option" value="9">Mathematics</option>
+              <option class="option" value="0">English</option>
+              <option class="option" value="1">Foreign Language</option>
+              <option class="option" value="2">Economics</option>
+              <option class="option" value="3">History</option>
+              <option class="option" value="4">Geography</option>
+              <option class="option" value="5">Business</option>
+              <option class="option" value="6">Physics</option>
+              <option class="option" value="7">Chemistry</option>
+              <option class="option" value="8">Mathematics</option>
             </select>
           </>
           <div>
             <p class="filterLabel" style="color: #52154e">Qualification</p>
             <select class="form-select" id="qualis" multiple>
-              <option class="option" value="1">English</option>
-              <option class="option" value="2">Foreign Language</option>
-              <option class="option" value="3">Economics</option>
-              <option class="option" value="4">History</option>
-              <option class="option" value="5">Geography</option>
-              <option class="option" value="6">Business</option>
-              <option class="option" value="7">Physics</option>
-              <option class="option" value="8">Chemistry</option>
-              <option class="option" value="9">Mathematics</option>
+              <option class="option" value="0">PSLE</option>
+            <option class="option" value="1">O-Level</option>
+            <option class="option" value="2">A-Level</option>
+            <option class="option" value="3">IBDP</option>
+            <option class="option" value="4">Bachelor's Degree</option>
+            <option class="option" value="5">Graduate or Post-Graduate</option>
+            <option class="option" value="6">Other</option>
             </select>
           </div>
           <div>
@@ -126,6 +120,33 @@
         </div>
         <div class="col-10 row d-flex justify-content-center tutorCards">
           <!-- will be populated -->
+        </div>
+      </div>
+    </div>
+    <div class="popUpBackground d-none"></div>
+    <div class="popupMenu d-none">
+      <div class="ms-4 mb-5 col-3 position-fixed">
+        <div class="card-tutor">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h5 class="card-title text-center">Tutor</h5>
+            <img src="https://unsplash.it/100/100" class="rounded-circle"/>
+            <p class="bio">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              quasi ducimus commodi pariatur nihil, officiis minus nesciunt
+              rem perferendis debitis.
+            </p>
+            <p class="subjects">
+              <span>Subjects taught:</span> History, Physics, etc.
+            </p>
+            <p class="subjects">
+              <span>Qualification:</span> IB Diploma
+            </p>
+            <p class="subjects">
+              <span>Current Prestige:</span> 5.0 / 5.0
+            </p>
+            <a type="button" class="btn btn-secondary">Contact via email</a>
+            <button class="position-absolute close"><i class="fa-solid fa-xmark"></i></button>
+          </div>
         </div>
       </div>
     </div>

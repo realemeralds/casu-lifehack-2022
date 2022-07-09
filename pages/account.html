@@ -18,6 +18,7 @@
       integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
       crossorigin="anonymous"
     ></script>
+    <script defer src="../../../scripts/account.js"></script>
   </head>
   <body class="account">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -62,15 +63,15 @@
     </nav>
 
     <!-- starts here -->
-    <div class="d-flex flex-column justify-content-center align-items-center">
+    <div
+      class="d-flex flex-column justify-content-center align-items-center accountContainer"
+    >
       <h1>Account</h1>
       <p class="desc">Monitor your account from here.</p>
-      <img src="https://unsplash.it/300/300" class="rounded-circle" />
-      <h5 class="status">Logged in as ...</h5>
-      <div class="d-flex flex-column">
-        <a type="button" href="#" class="btn btn-primary">Sign In</a>
-        <a type="button" href="#" class="btn btn-primary">Register</a>
-        <a type="button" href="#" class="btn btn-primary">Sign Out</a>
+      <img src="https://unsplash.it/250/250" class="rounded-circle" />
+
+      <div id="buttoncontainer" class="d-flex flex-column">
+        <!-- will be populated -->
       </div>
     </div>
   </body>
