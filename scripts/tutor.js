@@ -1,5 +1,5 @@
 tutorCards = document.querySelector(".tutorCards");
-url = "http://192.168.1.16:5000/";
+url = "https://lifehack-flask-auth.herokuapp.com/";
 
 responseString = fetch(`${url}/tutor`, {
   mode: "cors",

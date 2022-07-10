@@ -1,4 +1,4 @@
-url = "https://lifehack-flask-auth.herokuapp.com";
+url = "https://lifehack-flask-auth.herokuapp.com/";
 formElem = document.querySelector(".loginForm");
 console.log(formElem);
 
