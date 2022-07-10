@@ -22,7 +22,7 @@
     <script defer src="../../../scripts/tutor.js"></script>
     <script src="https://kit.fontawesome.com/51ffbc52bc.js" crossorigin="anonymous"></script>
   </head>
-  <body class="tutor">
+  <body class="tutor mb-5">
     <nav class="navbar navbar-expand-lg bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="../../../index.html">CasuTutor</a>
@@ -72,7 +72,7 @@
         to contact the tutors.
       </p>
 
-      <div class="d-flex flex-row me-5 mb-5 mt-4">
+      <div class="d-flex flex-row me-5 mb-5 mt-4 filterContainer">
         <div class="col-2 card card-filter">
             <p class="filterInfo">
               Hold down <b>CTRL</b> to select mutliple subjects or
@@ -103,20 +103,6 @@
             <option class="option" value="6">Other</option>
             </select>
           </div>
-          <div>
-            <p class="filterLabel" style="color: #3c91e6">Prestige</p>
-            <select class="form-select" id="Prestige">
-              <option class="option" value="1">English</option>
-              <option class="option" value="2">Foreign Language</option>
-              <option class="option" value="3">Economics</option>
-              <option class="option" value="4">History</option>
-              <option class="option" value="5">Geography</option>
-              <option class="option" value="6">Business</option>
-              <option class="option" value="7">Physics</option>
-              <option class="option" value="8">Chemistry</option>
-              <option class="option" value="9">Mathematics</option>
-            </select>
-          </div>
         </div>    
         <div class="col-10 row d-flex justify-content-center tutorCards">
           <!-- will be populated -->
@@ -124,6 +110,22 @@
       </div>
     </div>
     <div class="popUpBackground d-none"></div>
+    <div class="popupSignin d-none">
+      <div class="ms-4 mb-5 col-3 position-fixed">
+        <div class="card-tutor">
+          <div class="card-body">
+            <h5 class="card-title">Oops!</h5>
+            <p class="card-text">Can't access this page until you have signed in.</p>
+            <div class="d-flex flex-column links">
+              <a style="text-decoration: none" href="../../../index.html" class="card-link"><i class="fa-solid fa-arrow-right"></i> Back to homepage</a>
+              <a style="text-decoration: none" href="../../../pages/signin.html" class="card-link"><i class="fa-solid fa-arrow-right"></i> Sign in</a>
+              <a style="text-decoration: none" href="../../../pages/signup.html" class="card-link"><i class="fa-solid fa-arrow-right"></i> Register</a>
+              <button class="position-absolute close"> </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="popupMenu d-none">
       <div class="ms-4 mb-5 col-3 position-fixed">
         <div class="card-tutor">
@@ -145,7 +147,7 @@
               <span>Current Prestige:</span> 5.0 / 5.0
             </p>
             <a type="button" class="btn btn-secondary">Contact via email</a>
-            <button class="position-absolute close"><i class="fa-solid fa-xmark"></i></button>
+            <button class="position-absolute close emailContact"><i class="fa-solid fa-xmark"></i></button>
           </div>
         </div>
       </div>
