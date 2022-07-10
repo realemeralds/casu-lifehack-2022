@@ -1,5 +1,5 @@
-// url = "https://lifehack-flask-auth.herokuapp.com";
-url = "http://192.168.1.16:5000";
+tutorCards = document.querySelector(".tutorCards");
+url = "http://192.168.1.16:5000/";
 
 responseString = fetch(`${url}/tutor`, {
   mode: "cors",
@@ -51,8 +51,9 @@ responseString = fetch(`${url}/tutor`, {
         prestige: 4.0,
       },
     ];
-    render_tutors("all", tutorCards);
-    render_tutors("random", randomCards);
+    console.log(json);
+    console.log(json2);
+    render_tutors();
   });
 
 const subjectsList = [
@@ -75,19 +76,9 @@ const qualiList = [
   "Graduate or Post-Graduate Degree",
 ];
 
-tutorCards = document.getElementsByClassName("tutorCards")[1];
-randomCards = document.getElementsByClassName("tutorCards")[0];
-console.log(document.getElementsByClassName("tutorCards"));
-
-function render_tutors(key, elName) {
-  if (localStorage.getItem("loggedIn") == null) {
-    return;
-  }
-
-  console.log(key, elName);
+function render_tutors() {
   tutorCards.innerHTML = "";
-  instJson = json[0][key];
-  console.log(instJson);
+  console.log(json);
   var selectedSubject = $("#subject").val();
   var selectedQualis = $("#qualis").val();
   for (var i = 0; i < selectedSubject.length; i++) {
@@ -101,14 +92,15 @@ function render_tutors(key, elName) {
   }
 
   for (var i = 0; i < json.length; i++) {
-    if (typeof instJson[i].interest == "number") {
-      instJson[i].interest = [instJson[i].interest];
+    console.log(typeof json[i].interest);
+    if (typeof json[i].interest == "number") {
+      json[i].interest = [json[i].interest];
     }
     if (
-      selectedSubject.every((val) => instJson[i].interest.includes(val)) &&
-      selectedQualis.includes(instJson[i].quali)
+      selectedSubject.every((val) => json[i].interest.includes(val)) &&
+      selectedQualis.includes(json[i].quali)
     ) {
-      indivJson = instJson[i];
+      indivJson = json[i];
       console.log(indivJson);
       indivCardBody = document.createElement("div");
       indivCardBody.classList.add("card-body");
@@ -143,7 +135,7 @@ function render_tutors(key, elName) {
       indivCard.setAttribute("onclick", `open_popup(${i})`);
       indivCard.appendChild(firstInline);
       console.log(indivCard);
-      elName.appendChild(indivCard);
+      tutorCards.appendChild(indivCard);
     }
   }
 }
@@ -170,8 +162,6 @@ function open_popup(i) {
   popup_window.getElementsByClassName(
     "subjects"
   )[2].innerHTML = `<span>Current Prestige:</span> ${indivJson.prestige} / 5.0`;
-  emailEl = popup_window.querySelector(".emailContact");
-  emailEl.setAttribute("onclick", `submitInterest(${i})`);
 }
 
 function close_popup() {

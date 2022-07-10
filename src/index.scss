@@ -167,6 +167,8 @@ body {
 
 .tutor {
 
+  overflow-x: hidden;
+
   .tutorCards {
     button {
       background-color: #FFFFFF00;
@@ -280,28 +282,9 @@ body {
       background-color: #FFFFFF;
     }
 
-    .popupSignin {
-      .close {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        border-width: 0;
-        background-color: #FFFFFF;
-      }
-
-      .links {
-        .card-link {
-          font-style: normal;
-          text-decoration: none !important;
-        }
-      }
-    }
-
-
   }
 
-  .popupMenu,
-  .popupSignin {
+  .popupMenu {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -353,10 +336,6 @@ body {
         margin-top: 10px;
         font-family: SFDisplaySemibold;
       }
-
-      .btn {
-        margin-bottom: 10px;
-      }
     }
   }
 
@@ -400,7 +379,7 @@ body {
   .btn {
     font-family: SFDisplayRegular;
     font-size: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   #button1 {

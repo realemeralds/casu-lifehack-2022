@@ -1,5 +1,4 @@
-// url = "https://lifehack-flask-auth.herokuapp.com";
-url = "http://192.168.1.16:5000";
+url = "http://192.168.1.16:5000/";
 formElem = document.querySelector("#loginForm");
 console.log(formElem);
 formElem.addEventListener("submit", function (e) {
@@ -21,34 +20,31 @@ formElem.addEventListener("submit", function (e) {
     body: data,
   })
     .then((response) => {
-      if (!response.ok) {
+      if (response.ok) {
+        alertEl = document.querySelector(".elStatus");
+        alertEl.classList.add("alert");
+        alertEl.classList.add("alert-success");
+        alertEl.setAttribute("role", "alert");
+        alertEl.innerHTML = "successfully logged in!";
+        localStorage.setItem("loggedIn", "true");
+        localStorage.setItem("username", formData.get("username"));
+        console.log(localStorage.getItem("loggedIn"));
+        setTimeout(() => {
+          window.location.href = "../../pages/tutor.html";
+        }, 2000);
+      } else {
         alertEl = document.querySelector(".elStatus");
         alertEl.classList.add("alert");
         alertEl.classList.add("alert-danger");
         alertEl.setAttribute("role", "alert");
         alertEl.innerHTML = "incorrect credentials";
-        console.log(alertEl);
-        throw new Error("Network response was not OK");
+        document.querySelector(".loginForm").appendChild(alertEl);
       }
-      return response.json();
-    })
-    .then(() => {
-      alertEl = document.querySelector(".elStatus");
-      alertEl.classList.add("alert");
-      alertEl.classList.add("alert-success");
-      alertEl.setAttribute("role", "alert");
-      alertEl.innerHTML = "successfully logged in!";
-      console.log(alertEl);
-      localStorage.setItem("loggedIn", "true");
-      localStorage.setItem("username", formData.get("username"));
-      console.log(localStorage.getItem("loggedIn"));
-      setTimeout(() => {
-        window.location.href = "../../pages/tutor.html";
-      }, 2000);
     })
     .catch((error) => {
       console.error("Error:", "sad");
       alertEl = document.querySelector(".elStatus");
+      console.log(alertEl);
       alertEl.classList.add("alert");
       alertEl.classList.add("alert-danger");
       alertEl.setAttribute("role", "alert");
