@@ -46,6 +46,52 @@ body {
   color: #222222;
 }
 
+.index {
+  padding-top: 200px;
+  font-family: SFDisplayRegular;
+}
+
+.index a,
+.index a:hover,
+.index a:focus,
+.index a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.index .indexContainer {
+  inset: 0;
+  top: 50%;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.index .indexContainer .heading {
+  margin-bottom: 30px;
+  color: #111344;
+  font-size: 40px;
+  text-align: center;
+}
+
+.index .indexContainer .cardContainer .card {
+  margin-left: 40px;
+  width: 300px;
+  padding: 8px 0 15px 0;
+}
+
+.index .indexContainer .cardContainer .card-title {
+  font-family: SFDisplaySemibold;
+  font-weight: bold;
+  margin-bottom: 14px;
+}
+
+.index .indexContainer .cardContainer .card-text {
+  font-family: SFDisplayRegular;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #68717A;
+}
+
 .sign-in,
 .sign-up {
   overflow-x: hidden;
@@ -430,4 +476,21 @@ body {
 
 .account #button3 {
   background-color: #52154E;
+}
+
+.aboutContainer {
+  font-family: SFDisplayRegular;
+  width: 600px;
+  position: absolute;
+  inset: 0;
+}
+
+.aboutContainer .heading {
+  font-family: SFDisplaySemibold;
+  color: #111344;
+  font-size: 60px;
+}
+
+.aboutContainer .para {
+  font-size: 20px;
 }

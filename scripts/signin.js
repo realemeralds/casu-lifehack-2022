@@ -30,7 +30,7 @@ formElem.addEventListener("submit", function (e) {
         localStorage.setItem("username", formData.get("username"));
         console.log(localStorage.getItem("loggedIn"));
         setTimeout(() => {
-          window.location.href = "../../pages/tutor.html";
+          window.location.href = "../pages/tutor.html";
         }, 2000);
       } else {
         alertEl = document.querySelector(".elStatus");
