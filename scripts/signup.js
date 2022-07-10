@@ -20,7 +20,7 @@ formElem.addEventListener("submit", function (e) {
         teacher: "true",
       })
     );
-    window.location.href = "signUpTeacher.html";
+    window.location.href = "./signupteacher.html";
   } else {
     data = JSON.stringify({
       teacher: "false",
@@ -46,7 +46,7 @@ formElem.addEventListener("submit", function (e) {
           alertEl.innerHTML =
             "successfully created account! redirecting to login!";
           setTimeout(() => {
-            window.location.href = "../../pages/signin.html";
+            window.location.href = "../pages/signin.html";
           }, 2000);
         } else {
           alertEl = document.querySelector(".elStatus");
