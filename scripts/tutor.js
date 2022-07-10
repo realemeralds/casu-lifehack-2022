@@ -146,7 +146,7 @@ popup_background = document.querySelector(".popUpBackground");
 function open_popup(i) {
   popup_background.classList.remove("d-none");
   popup_window.classList.remove("d-none");
-  indivJson = json[0]["all"][i];
+  indivJson = json[i];
   popup_window.querySelector("h5").innerHTML = indivJson.username;
   popup_window.querySelector(".bio").innerHTML = indivJson.bio;
   popup_window.getElementsByClassName(
