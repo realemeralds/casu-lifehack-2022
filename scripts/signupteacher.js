@@ -1,4 +1,5 @@
-url = "https://lifehack-flask-auth.herokuapp.com";
+// url = "https://lifehack-flask-auth.herokuapp.com";
+url = "http://192.168.1.16:5000";
 formElem = document.querySelector(".loginForm");
 console.log(formElem);
 
@@ -38,7 +39,8 @@ formElem.addEventListener("submit", function (e) {
         alertEl.classList.add("alert");
         alertEl.classList.add("alert-success");
         alertEl.setAttribute("role", "alert");
-        alertEl.innerHTML = 'successfully created account! redirecting to login!';
+        alertEl.innerHTML =
+          "successfully created account! redirecting to login!";
         setTimeout(() => {
           window.location.href = "../../pages/signin.html";
         }, 2000);
@@ -48,7 +50,9 @@ formElem.addEventListener("submit", function (e) {
         alertEl.classList.add("alert-danger");
         alertEl.setAttribute("role", "alert");
         alertEl.innerHTML = "incorrect credentials";
-      })
+      }
+    })
+
     .then((data) => {
       console.log("Success:", data);
     })

@@ -66,11 +66,13 @@
 
     <!-- Code starts here -->
     <div class="container-fluid tutorContainer">
+      <div class="header">
       <h1 class="heading mt-5">Find Tutors</h1>
       <p class="subheader">
         Use the relevant filters to narrow your search, and click on the tiles
         to contact the tutors.
       </p>
+    </div>
 
       <div class="d-flex flex-row me-5 mb-5 mt-4">
         <div class="col-2 card card-filter">
@@ -144,11 +146,27 @@
             <p class="subjects">
               <span>Current Prestige:</span> 5.0 / 5.0
             </p>
-            <a type="button" class="btn btn-secondary">Contact via email</a>
-            <button class="position-absolute close"><i class="fa-solid fa-xmark"></i></button>
+            <a type="button" class="btn btn-secondary emailContact">Contact via email</a>
+            <button class="position-absolute close emailContact" onclick="submitInterest()"><i class="fa-solid fa-xmark"></i></button>
+            <div class="elStatus"></div>
           </div>
         </div>
       </div>
     </div>
+    <div class="popupSignin d-none">
+      <div class="ms-4 mb-5 col-3 position-fixed">
+        <div class="card-tutor">
+          <div class="card-body">
+            <h5 class="card-title">Oops!</h5>
+            <p class="card-text">Can't access this page until you have signed in.</p>
+            <div class="d-flex flex-column links">
+              <a style="text-decoration: none" href="../../../index.html" class="card-link"><i class="fa-solid fa-arrow-right"></i>  Back to homepage</a>
+              <a style="text-decoration: none" href="../../../pages/signin.html" class="card-link"><i class="fa-solid fa-arrow-right"></i>  Sign in</a>
+              <a style="text-decoration: none" href="../../../pages/signup.html" class="card-link"><i class="fa-solid fa-arrow-right"></i>  Register</a>
+              <button class="position-absolute close"> </button>
+            </div>
+          </div>
+        </div>
+      </div>
   </body>
 </html>

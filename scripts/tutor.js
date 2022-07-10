@@ -1,5 +1,6 @@
 tutorCards = document.querySelector(".tutorCards");
-url = "https://lifehack-flask-auth.herokuapp.com";
+// url = "https://lifehack-flask-auth.herokuapp.com";
+url = "http://192.168.1.16:5000";
 
 responseString = fetch(`${url}/tutor`, {
   mode: "cors",
@@ -52,7 +53,6 @@ responseString = fetch(`${url}/tutor`, {
       },
     ];
     console.log(json);
-    console.log(json2);
     render_tutors();
   });
 
@@ -77,6 +77,9 @@ const qualiList = [
 ];
 
 function render_tutors() {
+  if (localStorage.getItem("loggedIn") == null) {
+    return;
+  }
   tutorCards.innerHTML = "";
   var selectedSubject = $("#subject").val();
   var selectedQualis = $("#qualis").val();
@@ -90,10 +93,11 @@ function render_tutors() {
     selectedQualis = [0, 1, 2, 3, 4, 5, 6];
   }
   for (var i = 0; i < json.length; i++) {
-    console.log(typeof json[i].interest);
     if (typeof json[i].interest == "number") {
       console.log(json);
-      json[i].interest = Array(json[i].interest);
+      console.log("h1 mom!");
+      console.log(json[i].interest);
+      json[i].interest = [json[i].interest];
     }
     if (
       selectedSubject.every((val) => json[i].interest.includes(val)) &&
@@ -160,6 +164,8 @@ function open_popup(i) {
   popup_window.getElementsByClassName(
     "subjects"
   )[2].innerHTML = `<span>Current Prestige:</span> ${indivJson.prestige} / 5.0`;
+  emailEl = popup_window.querySelector(".emailContact");
+  emailEl.setAttribute("onclick", `submitInterest(${i})`);
 }
 
 function close_popup() {
@@ -168,3 +174,39 @@ function close_popup() {
 }
 window.addEventListener("click", () => render_tutors());
 document.querySelector(".close").addEventListener("click", close_popup);
+
+popup_signin_window = document.querySelector(".popupSignin");
+
+function open_signIn_popup() {
+  popup_background.classList.remove("d-none");
+  popup_signin_window.classList.remove("d-none");
+}
+
+if (localStorage.getItem("loggedIn") == null) {
+  open_signIn_popup();
+}
+
+function submitInterest(i) {
+  indivJson = json[i];
+  console.log(indivJson);
+  fetch(
+    `${url}/email/${localStorage.getItem("username")}/${indivJson.email}`
+  ).then((response) => {
+    if (response.ok) {
+      console.log(indivJson.email);
+      alertEl = document.querySelector(".elStatus");
+      alertEl.classList.add("alert");
+      alertEl.classList.add("alert-success");
+      alertEl.setAttribute("role", "alert");
+      alertEl.innerHTML = "email successfully sent!";
+    } else {
+      alertEl = document.querySelector(".elStatus");
+      alertEl.classList.add("alert");
+      alertEl.classList.add("alert-danger");
+      alertEl.setAttribute("role", "alert");
+      alertEl.innerHTML =
+        "email error, make sure your email address is correct.";
+      console.log(response.url);
+    }
+  });
+}

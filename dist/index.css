@@ -293,7 +293,21 @@ body {
   background-color: #FFFFFF;
 }
 
-.tutor .popupMenu {
+.tutor .card-tutor .popupSignin .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border-width: 0;
+  background-color: #FFFFFF;
+}
+
+.tutor .card-tutor .popupSignin .links .card-link {
+  font-style: normal;
+  text-decoration: none !important;
+}
+
+.tutor .popupMenu,
+.tutor .popupSignin {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -306,11 +320,13 @@ body {
   /* Need a specific value to work */
 }
 
-.tutor .popupMenu body {
+.tutor .popupMenu body,
+.tutor .popupSignin body {
   position: relative;
 }
 
-.tutor .popupMenu .card-tutor {
+.tutor .popupMenu .card-tutor,
+.tutor .popupSignin .card-tutor {
   background-color: #FFFFFF;
   width: 400px;
   padding: 20px;
@@ -320,33 +336,44 @@ body {
   z-index: 70;
 }
 
-.tutor .popupMenu .card-tutor .card-title {
+.tutor .popupMenu .card-tutor .card-title,
+.tutor .popupSignin .card-tutor .card-title {
   font-family: SFDisplaySemibold;
   font-size: 30px;
   margin-bottom: 5px;
 }
 
-.tutor .popupMenu .card-tutor img {
+.tutor .popupMenu .card-tutor img,
+.tutor .popupSignin .card-tutor img {
   width: 100px;
   height: 100px;
   margin-bottom: 20px;
 }
 
-.tutor .popupMenu .card-tutor .bio {
+.tutor .popupMenu .card-tutor .bio,
+.tutor .popupSignin .card-tutor .bio {
   margin-bottom: 10px;
 }
 
-.tutor .popupMenu .card-tutor .subjects {
+.tutor .popupMenu .card-tutor .subjects,
+.tutor .popupSignin .card-tutor .subjects {
   margin-bottom: 0px;
 }
 
-.tutor .popupMenu .card-tutor .subjects span {
+.tutor .popupMenu .card-tutor .subjects span,
+.tutor .popupSignin .card-tutor .subjects span {
   font-weight: bold;
 }
 
-.tutor .popupMenu .card-tutor a {
+.tutor .popupMenu .card-tutor a,
+.tutor .popupSignin .card-tutor a {
   margin-top: 10px;
   font-family: SFDisplaySemibold;
+}
+
+.tutor .popupMenu .card-tutor .btn,
+.tutor .popupSignin .card-tutor .btn {
+  margin-bottom: 10px;
 }
 
 .tutor .popUpBackground {
@@ -383,7 +410,7 @@ body {
 .account .btn {
   font-family: SFDisplayRegular;
   font-size: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .account #button1 {
