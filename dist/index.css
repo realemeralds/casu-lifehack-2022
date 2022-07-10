@@ -224,6 +224,23 @@ body {
   font-size: 20px;
 }
 
+.tutor .subheading {
+  text-align: center;
+  font-family: SFDisplayLight;
+  color: #222222;
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.tutor .topHeader,
+.tutor .randomHeader {
+  text-align: center;
+  font-family: SFDisplayRegular;
+  color: #656839;
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
 .tutor .card-filter {
   padding: 20px;
   border-width: 0;

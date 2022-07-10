@@ -1,4 +1,3 @@
-tutorCards = document.querySelector(".tutorCards");
 // url = "https://lifehack-flask-auth.herokuapp.com";
 url = "http://192.168.1.16:5000";
 
@@ -52,8 +51,8 @@ responseString = fetch(`${url}/tutor`, {
         prestige: 4.0,
       },
     ];
-    console.log(json);
-    render_tutors();
+    render_tutors("all", tutorCards);
+    render_tutors("random", randomCards);
   });
 
 const subjectsList = [
@@ -76,11 +75,19 @@ const qualiList = [
   "Graduate or Post-Graduate Degree",
 ];
 
-function render_tutors() {
+tutorCards = document.getElementsByClassName("tutorCards")[1];
+randomCards = document.getElementsByClassName("tutorCards")[0];
+console.log(document.getElementsByClassName("tutorCards"));
+
+function render_tutors(key, elName) {
   if (localStorage.getItem("loggedIn") == null) {
     return;
   }
+
+  console.log(key, elName);
   tutorCards.innerHTML = "";
+  instJson = json[0][key];
+  console.log(instJson);
   var selectedSubject = $("#subject").val();
   var selectedQualis = $("#qualis").val();
   for (var i = 0; i < selectedSubject.length; i++) {
@@ -92,18 +99,17 @@ function render_tutors() {
   if (selectedQualis.length == 0) {
     selectedQualis = [0, 1, 2, 3, 4, 5, 6];
   }
+
   for (var i = 0; i < json.length; i++) {
-    if (typeof json[i].interest == "number") {
-      console.log(json);
-      console.log("h1 mom!");
-      console.log(json[i].interest);
-      json[i].interest = [json[i].interest];
+    if (typeof instJson[i].interest == "number") {
+      instJson[i].interest = [instJson[i].interest];
     }
     if (
-      selectedSubject.every((val) => json[i].interest.includes(val)) &&
-      selectedQualis.includes(json[i].quali)
+      selectedSubject.every((val) => instJson[i].interest.includes(val)) &&
+      selectedQualis.includes(instJson[i].quali)
     ) {
-      indivJson = json[i];
+      indivJson = instJson[i];
+      console.log(indivJson);
       indivCardBody = document.createElement("div");
       indivCardBody.classList.add("card-body");
       tutorName = document.createElement("h5");
@@ -137,7 +143,7 @@ function render_tutors() {
       indivCard.setAttribute("onclick", `open_popup(${i})`);
       indivCard.appendChild(firstInline);
       console.log(indivCard);
-      tutorCards.appendChild(indivCard);
+      elName.appendChild(indivCard);
     }
   }
 }
@@ -148,7 +154,7 @@ popup_background = document.querySelector(".popUpBackground");
 function open_popup(i) {
   popup_background.classList.remove("d-none");
   popup_window.classList.remove("d-none");
-  indivJson = json[i];
+  indivJson = json[0]["all"][i];
   popup_window.querySelector("h5").innerHTML = indivJson.username;
   popup_window.querySelector(".bio").innerHTML = indivJson.bio;
   popup_window.getElementsByClassName(
@@ -172,7 +178,10 @@ function close_popup() {
   popup_background.classList.add("d-none");
   popup_window.classList.add("d-none");
 }
-window.addEventListener("click", () => render_tutors());
+window.addEventListener("click", () => {
+  render_tutors("all", tutorCards);
+  render_tutors("random", randomCards);
+});
 document.querySelector(".close").addEventListener("click", close_popup);
 
 popup_signin_window = document.querySelector(".popupSignin");
@@ -188,12 +197,10 @@ if (localStorage.getItem("loggedIn") == null) {
 
 function submitInterest(i) {
   indivJson = json[i];
-  console.log(indivJson);
   fetch(
     `${url}/email/${localStorage.getItem("username")}/${indivJson.email}`
   ).then((response) => {
     if (response.ok) {
-      console.log(indivJson.email);
       alertEl = document.querySelector(".elStatus");
       alertEl.classList.add("alert");
       alertEl.classList.add("alert-success");
@@ -206,7 +213,6 @@ function submitInterest(i) {
       alertEl.setAttribute("role", "alert");
       alertEl.innerHTML =
         "email error, make sure your email address is correct.";
-      console.log(response.url);
     }
   });
 }
