@@ -169,8 +169,7 @@ function close_popup() {
   popup_window.classList.add("d-none");
 }
 window.addEventListener("click", () => {
-  render_tutors("all", tutorCards);
-  render_tutors("random", randomCards);
+  render_tutors();
 });
 document.querySelector(".close").addEventListener("click", close_popup);
 
@@ -179,6 +178,12 @@ popup_signin_window = document.querySelector(".popupSignin");
 function open_signIn_popup() {
   popup_background.classList.remove("d-none");
   popup_signin_window.classList.remove("d-none");
+}
+
+function close_signIn_popup() {
+  console.log("we");
+  popup_background.classList.add("d-none");
+  popup_signin_window.classList.add("d-none");
 }
 
 if (localStorage.getItem("loggedIn") == null) {
