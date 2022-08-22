@@ -1,4 +1,4 @@
-##Chosen theme and problem statement
+## Chosen theme and problem statement
 Giving back, 
 
 ## Inspiration
